@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khalsa Mission Academy</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome (Required for Icons) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f5f7ff;
+}
+
+/* ================= NAVBAR ================= */
+
+/* ===== NAVBAR MODERN DESIGN ===== */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:linear-gradient(90deg,#6a11cb,#2575fc);
+color:white;
+box-shadow:0 8px 25px rgba(0,0,0,0.2);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+/* left side */
+.nav-left{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo{
+font-size:20px;
+font-weight:600;
+}
+
+/* desktop links */
+.nav-links{
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:white;
+padding:8px 16px;
+border-radius:8px;
+transition:.3s;
+}
+
+.nav-links a:hover{
+background:white;
+color:#2575fc;
+}
+
+/* hamburger */
+.hamburger{
+display:none;
+flex-direction:column;
+cursor:pointer;
+}
+
+.hamburger div{
+width:25px;
+height:3px;
+background:white;
+margin:4px;
+border-radius:5px;
+}
+
+/* ===== MOBILE NAVBAR ===== */
+@media(max-width:768px){
+
+.navbar{
+padding:15px 20px;
+}
+
+/* show hamburger on right */
+.hamburger{
+display:flex;
+margin-left:auto;
+}
+
+/* menu design */
+.nav-links{
+position:fixed;
+top:0;
+right:-100%;
+height:100vh;
+width:260px;
+background:rgba(255,255,255,0.98);
+backdrop-filter:blur(15px);
+flex-direction:column;
+align-items:flex-start;
+padding:80px 25px;
+gap:20px;
+box-shadow:-10px 0 30px rgba(0,0,0,0.2);
+transition:0.4s ease;
+}
+
+/* show menu */
+.nav-links.show{
+right:0;
+}
+
+/* mobile link style */
+.nav-links a{
+color:#333;
+font-size:18px;
+width:100%;
+border-radius:10px;
+}
+
+.nav-links a:hover{
+background:#2575fc;
+color:white;
+padding-left:15px;
+}
+
+/* logo text smaller */
+.logo{
+font-size:16px;
+}
+}
+
+/* ================= SECTION CARD ================= */
+
+.section{
+width:85%;
+margin:auto;
+background:white;
+padding:50px;
+border-radius:20px;
+box-shadow:0 10px 35px rgba(0,0,0,0.08);
+}
+
+/* ================= PRINCIPAL ================= */
+
+.principal-section{
+display:flex;
+gap:40px;
+align-items:center;
+}
+
+.principal-text{
+flex:2;
+text-align:justify;
+}
+
+.principal-image img{
+width:320px;
+border-radius:15px;
+box-shadow:0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* ================= IMAGE CARDS ================= */
+
+.image-container{
+display:flex;
+gap:30px;
+justify-content:center;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+/* FIXED TOPPER ALIGNMENT */
+.image-box{
+width:260px;
+background:white;
+padding:20px;
+border-radius:18px;
+box-shadow:0 12px 30px rgba(0,0,0,0.12);
+text-align:center;
+
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:flex-start;
+min-height:380px;
+}
+
+.image-box img{
+width:100%;
+border-radius:12px;
+margin-bottom:15px;
+}
+
+.image-box p{
+margin-top:auto;
+line-height:1.6;
+}
+
+/* ================= STUDENT IMAGES ================= */
+
+.image-container img{
+width:200px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+transition:.3s;
+}
+
+.image-container img:hover{
+transform:scale(1.05);
+}
+
+/* ================= CENTER IMAGE ================= */
+
+.center-img{
+display:block;
+margin:30px auto;
+max-width:420px;
+width:100%;
+border-radius:20px;
+box-shadow:0 20px 40px rgba(0,0,0,0.25);
+}
+
+/* ================= PRINCIPAL WITH STUDENTS ================= */
+
+.principal-students{
+width:85%;
+margin:60px auto;
+display:flex;
+gap:50px;
+align-items:center;
+background:linear-gradient(135deg,#eef2ff,#ffffff);
+padding:50px;
+border-radius:20px;
+box-shadow:0 12px 40px rgba(0,0,0,0.1);
+}
+
+.principal-students img{
+width:420px;
+border-radius:18px;
+box-shadow:0 20px 45px rgba(0,0,0,0.3);
+}
+
+.principal-students-text{flex:1;}
+
+.principal-students-text h2{
+color:#2575fc;
+margin-bottom:15px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+margin-top:70px;
+padding:30px;
+background:white;
+text-align:center;
+box-shadow:0 -5px 20px rgba(0,0,0,0.1);
+}
+
+/* ================= HR ================= */
+
+hr{
+border:none;
+height:3px;
+background:#ddd;
+width:80%;
+margin:60px auto;
+}
+
+/* ================= CAROUSEL ================= */
+
+.carousel-item img{
+height:550px;
+object-fit:cover;
+border-radius:20px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+.hamburger{display:flex;}
+
+.nav-links{
+position:absolute;
+top:70px;
+right:-100%;
+background:white;
+width:220px;
+flex-direction:column;
+padding:20px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+transition:.4s;
+}
+
+.nav-links a{color:#333;}
+
+.nav-links.show{right:20px;}
+
+.principal-section{flex-direction:column;text-align:center;}
+.principal-students{flex-direction:column;text-align:center;}
+
+.carousel-item img{height:300px;}
+}
+.kll{
+    height: 40px;
+    width: 55px;
+}
+.loop{
+  font-size:42px;
+  color:#ff6b6b;
+  margin:0;
+  letter-spacing:2px;
+}
+
+/* Content Style */
+.lpp{
+  font-size:18px;
+  line-height:1.6;
+  color:#444;
+  margin:0;
+}
+/* ================= BIG FOOTER ================= */
+
+.big-footer{
+background:linear-gradient(90deg,#6a11cb,#2575fc);
+color:white;
+padding:70px 40px 20px;
+margin-top:80px;
+}
+
+.footer-container{
+display:flex;
+flex-wrap:wrap;
+justify-content:space-between;
+gap:40px;
+max-width:1200px;
+margin:auto;
+}
+
+.footer-box{
+flex:1;
+min-width:250px;
+}
+
+.footer-box h3{
+margin-bottom:20px;
+font-weight:600;
+}
+
+.footer-box p{
+line-height:1.7;
+opacity:0.9;
+}
+
+.footer-links a{
+display:block;
+text-decoration:none;
+color:white;
+margin-bottom:12px;
+transition:.3s;
+}
+
+.footer-links a:hover{
+padding-left:8px;
+color:#ffd700;
+}
+
+.footer-social i{
+font-size:22px;
+margin-right:15px;
+cursor:pointer;
+transition:.3s;
+}
+
+.footer-social i:hover{
+transform:scale(1.2);
+color:#ffd700;
+}
+
+.footer-bottom{
+text-align:center;
+margin-top:50px;
+border-top:1px solid rgba(255,255,255,0.3);
+padding-top:20px;
+opacity:0.9;
+}
+
+/* Mobile */
+@media(max-width:768px){
+.footer-container{
+flex-direction:column;
+text-align:center;
+}
+}
+/* ================= TEACHER CARDS ================= */
+
+.teacher-container{
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+justify-content:center;
+margin-top:30px;
+}
+
+.teacher-card{
+width:240px;
+background:white;
+border-radius:18px;
+box-shadow:0 12px 30px rgba(0,0,0,0.12);
+padding:20px;
+text-align:center;
+transition:.3s;
+}
+
+.teacher-card:hover{
+transform:translateY(-10px);
+}
+
+.teacher-card img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:12px;
+margin-bottom:15px;
+}
+
+.teacher-card h4{
+margin-bottom:5px;
+color:#2575fc;
+}
+
+.teacher-card p{
+color:#666;
+}
+/* ===== FACILITIES SECTION ===== */
+
+.facilities-section{
+width:85%;
+margin:70px auto;
+padding:60px 40px;
+border-radius:25px;
+background:linear-gradient(135deg,#eef2ff,#ffffff);
+box-shadow:0 15px 45px rgba(0,0,0,0.1);
+}
+
+/* TITLE */
+.facility-title{
+text-align:center;
+font-size:36px;
+font-weight:700;
+margin-bottom:20px;
+color:#2575fc;
+}
+
+/* DESCRIPTION */
+.facility-desc{
+max-width:850px;
+margin:0 auto 50px;
+text-align:justify;
+font-size:18px;
+line-height:1.8;
+color:#555;
+}
+
+/* CARDS CONTAINER */
+.teacher-container{
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+/* CARD DESIGN */
+.teacher-card{
+width:270px;
+background:white;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,0.12);
+padding:25px;
+text-align:center;
+transition:.4s;
+position:relative;
+overflow:hidden;
+}
+
+/* GLOW HOVER */
+.teacher-card:hover{
+transform:translateY(-12px) scale(1.03);
+box-shadow:0 20px 45px rgba(37,117,252,0.3);
+}
+
+/* TOP BORDER EFFECT */
+.teacher-card::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:5px;
+background:linear-gradient(90deg,#6a11cb,#2575fc);
+}
+
+/* IMAGE */
+.teacher-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:12px;
+margin:15px 0;
+}
+
+/* ICON */
+.facility-icon{
+font-size:28px;
+color:#2575fc;
+margin-bottom:10px;
+}
+
+/* TEXT */
+.teacher-card h4{
+color:#2575fc;
+margin-bottom:10px;
+font-weight:600;
+}
+
+.teacher-card p{
+text-align:justify;
+color:#666;
+line-height:1.6;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.facilities-section{
+padding:40px 20px;
+}
+.facility-title{
+font-size:28px;
+}
+}
+/* FORCE CARDS IN ONE ROW */
+.teacher-container{
+display:flex;
+justify-content:center;
+align-items:stretch;
+gap:30px;
+flex-wrap:nowrap;   /* keeps cards in one row */
+}
+
+/* make cards equal width */
+.teacher-card{
+flex:1;
+max-width:320px;
+}
+
+/* mobile responsive → stack */
+@media(max-width:900px){
+.teacher-container{
+flex-wrap:wrap;   /* mobile te neeche aa jaan */
+}
+}
+/* ===== GALLERY 2 ROW GRID ===== */
+.image-container{
+display:grid;
+grid-template-columns:repeat(5, 1fr); /* 5 images per row */
+gap:25px;
+width:85%;
+margin:40px auto;
+}
+
+/* images styling */
+.image-container img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:16px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+transition:0.4s ease;
+cursor:pointer;
+}
+
+/* hover animation */
+.image-container img:hover{
+transform:scale(1.06);
+box-shadow:0 20px 45px rgba(0,0,0,0.3);
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* tablet → 3 per row */
+@media(max-width:992px){
+.image-container{
+grid-template-columns:repeat(3, 1fr);
+}
+}
+
+/* mobile → 2 per row */
+@media(max-width:600px){
+.image-container{
+grid-template-columns:repeat(2, 1fr);
+}
+}
+/* ===== SHINING STAR SECTION ===== */
+
+.star-container{
+width:85%;
+margin:70px auto;
+text-align:center;
+}
+
+/* description text */
+.lpp{
+font-size:18px;
+line-height:1.7;
+color:#555;
+max-width:850px;
+margin:15px auto 40px;
+}
+
+/* cards row (NO extra row) */
+.star-cards{
+display:flex;
+justify-content:center;
+gap:35px;
+flex-wrap:nowrap; /* keep same row */
+}
+
+/* star card design */
+.image-box{
+width:280px;
+background:white;
+padding:25px;
+border-radius:20px;
+border:2px solid #eaeaea;
+box-shadow:0 12px 30px rgba(0,0,0,0.08);
+transition:0.4s;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+/* hover effect */
+.image-box:hover{
+transform:translateY(-12px);
+border-color:#2575fc;
+box-shadow:0 25px 60px rgba(37,117,252,0.25);
+}
+
+/* image styling */
+.image-box img{
+width:100%;
+height:230px;
+object-fit:cover;
+border-radius:14px;
+margin-bottom:18px;
+}
+
+/* student name highlight */
+.student-name{
+font-size:18px;
+font-weight:700;
+color:#2575fc;
+display:block;
+margin-bottom:8px;
+}
+
+/* text */
+.image-box p{
+font-size:15px;
+line-height:1.6;
+color:#555;
+}
+
+/* responsive */
+@media(max-width:900px){
+.star-cards{
+flex-wrap:wrap; /* mobile responsive */
+}
+}
+/* ===== FOOTER MAIN ===== */
+.big-footer {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+  padding-top: 60px;
+  font-family: Arial, sans-serif;
+}
+
+/* Container */
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 0 20px 40px;
+  flex-wrap: wrap;
+}
+
+/* Footer Boxes */
+.footer-box {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Headings */
+.footer-box h3 {
+  margin-bottom: 20px;
+  color: #facc15;
+  font-size: 22px;
+}
+
+/* Text */
+.footer-box p {
+  text-align: justify;
+  line-height: 1.8;
+  color: #e5e7eb;
+}
+
+/* ===== QUICK LINKS ===== */
+.footer-links a {
+  display: block;
+  color: #e5e7eb;
+  margin-bottom: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #facc15;
+  transform: translateX(5px);
+}
+
+/* ===== CONTACT ICONS ===== */
+.footer-box i {
+  margin-right: 10px;
+  color: #facc15;
+}
+
+/* ===== SOCIAL ICONS ===== */
+.footer-social {
+  margin-top: 15px;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin-right: 12px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  color: white;
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  background: #facc15;
+  color: black;
+  transform: scale(1.1);
+}
+
+/* ===== BOTTOM BAR ===== */
+.footer-bottom {
+  text-align: center;
+  padding: 18px;
+  background: rgba(0,0,0,0.4);
+  font-size: 14px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-box p {
+    text-align: justify;
+  }
+
+  .footer-links a {
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+}
+/* ===== SECTION ===== */
+.facilities-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f8fafc;
+}
+
+/* Title */
+.facility-title {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+/* Description */
+.facility-desc {
+  max-width: 800px;
+  margin: auto;
+  text-align: justify;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+/* ===== CARD CONTAINER ===== */
+.teacher-container {
+  display: flex;
+  flex-wrap: wrap; /* important for responsiveness */
+  justify-content: center;
+  gap: 30px;
+}
+
+/* ===== CARDS ===== */
+.teacher-card {
+  width: 320px; /* flexible card size */
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+/* Hover effect */
+.teacher-card:hover {
+  transform: translateY(-8px);
+}
+
+/* ===== RESPONSIVE IMAGES ===== */
+.teacher-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Text */
+.teacher-card p {
+  text-align: justify;
+  line-height: 1.6;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+  .teacher-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .teacher-card {
+    width: 90%;
+  }
+
+  .facility-title {
+    font-size: 26px;
+  }
+}
+/* ===== SECTION ===== */
+.facilities-section {
+  padding: 40px 15px;
+  background: #f9fafc;
+  text-align: center;
+}
+
+/* Title */
+.facility-title {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+/* Description */
+.facility-desc {
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  text-align: justify;
+  line-height: 1.7;
+}
+
+/* ===== REMOVE GRID / FLEX ===== */
+.teacher-container {
+  display: block; /* normal layout */
+}
+
+
+/* ===== REMOVE GRID / FLEX COMPLETELY ===== */
+.teacher-container{
+display:block;   /* normal layout */
+width:100%;
+}
+
+/* ===== SIMPLE CARDS ===== */
+.teacher-card{
+width:90%;
+max-width:500px;
+margin:25px auto;     /* center + spacing */
+background:#fff;
+padding:18px;
+border-radius:12px;
+box-shadow:0 4px 12px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+/* image */
+.teacher-card img{
+width:100%;
+height:auto;
+border-radius:10px;
+}
+
+/* heading */
+.teacher-card h4{
+margin:12px 0;
+}
+
+/* text */
+.teacher-card p{
+text-align:justify;
+line-height:1.6;
+}
+/* Make section broad */
+.principal-students {
+  width: 100%;
+  padding: 60px 120px;   /* makes it wide */
+  box-sizing: border-box;
+}
+
+/* Center text nicely */
+.facilities-section {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Title */
+.facility-title {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+/* Description */
+.facility-desc {
+  font-size: 18px;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* Remove grid → simple vertical layout */
+.teacher-container {
+  width: 100%;
+}
+
+/* Simple facility blocks */
+.facility-item {
+  margin-bottom: 50px;
+}
+
+/* Images */
+.facility-item img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+/* Heading */
+.facility-item h4 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Text */
+.facility-item p {
+  font-size: 17px;
+  line-height: 1.6;
+}
+/* ===== FACILITIES SECTION ===== */
+
+.facilities-section{
+padding:80px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+.facility-title{
+text-align:center;
+font-size:36px;
+color:#0d6efd;
+margin-bottom:15px;
+}
+
+.facility-desc{
+text-align:center;
+max-width:800px;
+margin:0 auto 60px;
+color:#555;
+line-height:1.7;
+}
+
+/* ROW DESIGN */
+.facility-row{
+display:flex;
+align-items:center;
+gap:40px;
+margin-bottom:60px;
+flex-wrap:wrap;
+}
+
+/* reverse layout */
+.facility-row.reverse{
+flex-direction:row-reverse;
+}
+
+.facility-img{
+flex:1;
+}
+
+.facility-img img{
+width:100%;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+transition:0.3s;
+}
+
+.facility-img img:hover{
+transform:scale(1.05);
+}
+
+.facility-text{
+flex:1;
+}
+
+.facility-text h3{
+font-size:26px;
+margin-bottom:10px;
+color:#333;
+}
+
+.facility-text p{
+color:#555;
+line-height:1.7;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+.facility-row,
+.facility-row.reverse{
+flex-direction:column;
+text-align:center;
+}
+
+.facility-title{
+font-size:28px;
+}
+
+}
+@media(max-width:768px){
+
+.hamburger{
+display:flex;
+}
+
+.nav-links{
+position:absolute;
+top:70px;
+right:0;
+background:#0046ad;
+flex-direction:column;
+width:220px;
+text-align:center;
+padding:20px 0;
+display:none;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+}
+
+
+
+
+
+
+
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+<div class="nav-left">
+<img class="kll" src="Logo.jpeg">
+<div class="logo">Khalsa Mission Academy Sen. sec. school</div>
+</div>
+
+<div class="hamburger" onclick="toggleMenu()">
+<div></div>
+<div></div>
+<div></div>
+</div>
+
+<div class="nav-links" id="navLinks">
+<a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+<a href="#"><i class="fas fa-images"></i> Gallery</a>
+<a href="#"><i class="fas fa-book"></i> History</a>
+<a href="#"><i class="fas fa-envelope"></i> Contact</a>
+</div>
+
+</nav>
+
+<!-- CAROUSEL -->
+<div class="container mt-4">
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+<div class="carousel-inner">
+<div class="carousel-item active">
+<img class="d-block w-100" src="khalsa school.jpeg">
+</div>
+</div>
+</div>
+</div>
+
+<!-- PRINCIPAL -->
+<div class="section">
+<div class="principal-section">
+
+<div class="principal-text">
+<h1>Our School Principal</h1>
+<p>
+Our respected principal is a visionary leader who guides the school with wisdom, dedication, and strong values. He inspires both teachers and students to achieve excellence in academics, discipline, and moral character.
+</p>
+</div>
+
+<div class="principal-image">
+<img src="school principal3.jpeg">
+</div>
+
+</div>
+</div>
+
+<hr>
+
+<div class="star-container">
+
+<h1 class="loop">Shining Stars</h1>
+
+<h4 class="lpp">
+Shining stars are individuals who inspire others through their talent, dedication, and achievements. 
+They work hard, overcome challenges, and set positive examples for everyone. Their success and determination 
+motivate others to dream big and strive for excellence in life.
+</h4>
+
+<div class="star-cards">
+
+<div class="image-box">
+<img src="simran 2.jpeg">
+<p>
+<span class="student-name">Ms. Simran Kaur Advocate ⚖️</span><br>
+Punjab & Haryana High Court, Chandigarh <br>
+District & Session Court, Ferozepur
+</p>
+</div>
+
+<div class="image-box">
+<img src="topper.jpeg">
+<p>
+<span class="student-name">Ms. Komal Daler — Medical Topper</span><br>
+Sri Guru Granth Sahib World University <br>
+Fatehgarh Sahib
+</p>
+</div>
+
+<div class="image-box">
+<img src="Medical.jpeg">
+<p>
+<span class="student-name">Ms. Muneet Kaur — Medical Subject Topper</span><br>
+Sri Guru Granth Sahib World University <br>
+Fatehgarh Sahib
+</p>
+</div>
+
+</div>
+</div>
+
+</div>
+
+<hr>
+
+<h1>Gallery</h1>
+
+<div class="image-container">
+<img src="student pic 3.jpeg">
+<img src="student pic 4.jpeg">
+<img src="student pic 5.jpeg">
+<img src="student pic 7.jpeg">
+<img src="student pic 8.jpeg">
+<img src="student pic.jpeg">
+<img src="student pic 9.jpeg">
+<img src="student pic 10.jpeg">
+<img src="student pic 11.jpeg">
+<img src="student pic 12.jpeg">
+</div>
+
+<hr>
+
+<!-- <h1>Khalsa Mission Academy Senior Secondary public school</h1> -->
+<!-- <img class="center-img" src="khalsa school.jpeg"> -->
+
+<!-- PRINCIPAL WITH STUDENTS -->
+<section class="facilities-section">
+
+<h2 class="facility-title">Our School Facilities</h2>
+
+<p class="facility-desc">
+Our school provides excellent facilities for students’ overall development. The computer lab helps students learn modern technology and improve their skills. The transport facility ensures safe and convenient travel for students. The green playground provides a healthy environment for games, exercise, and outdoor activities.
+</p>
+
+<!-- BUS -->
+<div class="facility-row">
+<div class="facility-img">
+<img src="school bus khalsa.jpg" alt="School Bus">
+</div>
+
+<div class="facility-text">
+<h3>Our School Bus</h3>
+<p>
+A school bus carries students safely from home to school and back. It follows a fixed route and ensures students reach school on time. It is a safe and convenient means of transport for children.
+</p>
+</div>
+</div>
+
+<!-- COMPUTER LAB -->
+<div class="facility-row reverse">
+<div class="facility-img">
+<img src="computer lab khalsa.jpg" alt="Computer Lab">
+</div>
+
+<div class="facility-text">
+<h3>Computer Lab</h3>
+<p>
+Our school computer lab helps students learn computer skills and technology. It has many computers with internet and educational software. Students use the lab to gain knowledge and improve their practical learning.
+</p>
+</div>
+</div>
+
+<!-- PLAYGROUND -->
+<div class="facility-row">
+<div class="facility-img">
+<img src="playground pic khalsa.jpg" alt="Playground">
+</div>
+
+<div class="facility-text">
+<h3>Green Playground</h3>
+<p>
+Our school playground is a place where students play and enjoy different games. It helps students stay healthy and active. The playground also develops teamwork and sportsmanship among students.
+</p>
+</div>
+</div>
+
+</section>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<!-- <div class="teacher-card">
+<img src="teacher4.jpeg" alt="Teacher">
+<h4>Ms. Jasleen Kaur</h4>
+<p>Computer Teacher</p>
+</div> -->
+
+</div>
+
+</div>
+
+</div>
+
+<!-- BIG FOOTER -->
+<!-- FOOTER -->
+<footer class="big-footer">
+
+  <div class="footer-container">
+
+    <!-- About School -->
+    <div class="footer-box">
+      <h3>Khalsa Mission Academy</h3>
+      <p>
+        Khalsa Mission Academy Senior Secondary School is dedicated to providing quality education,
+        strong moral values, and overall development of students. The school focuses on academic
+        excellence, discipline, and character building to create responsible citizens.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-box footer-links">
+      <h3>Quick Links</h3>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Gallery</a>
+      <a href="#">History</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-box">
+      <h3>Contact Us</h3>
+
+      <p><i class="fas fa-map-marker-alt"></i> Punjab, India</p>
+      <p><i class="fas fa-phone"></i> +91 9814023600</p>
+      <p><i class="fas fa-envelope"></i> khalsamissionacademy@gmail.com</p>
+
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Khalsa Mission Academy Senior Secondary School — All Rights Reserved
+  </div>
+
+</footer>
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
